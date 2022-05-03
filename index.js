@@ -1,10 +1,9 @@
 function fetchBooks() {
-  fetch("https://anapioficeandfire.com/api/books")
+  return fetch(`https://anapioficeandfire.com/api/books`)
   .then((resp) => resp.json())
-  .then((json) => renderBooks(json));
-  //.then(function (response) {
-  //return response.json();
+  .then((json) => {return renderBooks(json)});
 }
+
 // To pass the tests, don't forget to return your fetch!
   
 function renderBooks(books) {
